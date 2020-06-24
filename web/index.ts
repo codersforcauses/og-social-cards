@@ -152,7 +152,7 @@ const getLogo = (
   name: 'full' | 'short' | 'square' | 'circle'
 ) =>
   `https://website.codersforcauses.org/logo/cfc_logo_${color}${
-    name !== 'short' && `_${name}`
+    name !== 'short' ? `_${name}` : ''
   }.svg`;
 
 const imageLightOptions: DropdownOption[] = [
@@ -166,11 +166,11 @@ const imageLightOptions: DropdownOption[] = [
   },
   {
     text: 'Squared Logo',
-    value: getLogo('black', 'square')
+    value: getLogo('white', 'square')
   },
   {
     text: 'Circular Logo',
-    value: getLogo('black', 'circle')
+    value: getLogo('white', 'circle')
   }
 ];
 
@@ -185,11 +185,11 @@ const imageDarkOptions: DropdownOption[] = [
   },
   {
     text: 'Squared Logo',
-    value: getLogo('white', 'square')
+    value: getLogo('black', 'square')
   },
   {
     text: 'Circular Logo',
-    value: getLogo('white', 'circle')
+    value: getLogo('black', 'circle')
   }
 ];
 
@@ -241,10 +241,10 @@ const App = (_: any, state: AppState, setState: SetState) => {
   };
   const {
     fileType = 'png',
-    fontSize = '100px',
+    fontSize = '125px',
     theme = 'light',
     md = true,
-    text = '**Hello** World',
+    text = '**./coders_for_causes**',
     images = [imageLightOptions[0].value],
     widths = [],
     heights = [],
