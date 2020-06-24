@@ -36,6 +36,7 @@ export function parseRequest(req: IncomingMessage) {
     widths: getArray(widths),
     heights: getArray(heights)
   };
+
   parsedRequest.images = getDefaultImages(
     parsedRequest.images,
     parsedRequest.theme
@@ -55,10 +56,9 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
   const defaultImage =
-    theme === 'light'
+    theme === 'dark'
       ? 'https://website.codersforcauses.org/logo/cfc_logo_white_full.svg'
       : 'https://website.codersforcauses.org/logo/cfc_logo_black_full.svg';
-
   if (!images || !images[0]) {
     return [defaultImage];
   }
