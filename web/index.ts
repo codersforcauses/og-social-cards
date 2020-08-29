@@ -151,7 +151,7 @@ const getLogo = (
   color: 'white' | 'black',
   name: 'full' | 'short' | 'square' | 'circle'
 ) =>
-  `https://website.codersforcauses.org/logo/cfc_logo_${color}${
+  `https://codersforcauses.org/logo/cfc_logo_${color}${
     name !== 'short' ? `_${name}` : ''
   }.svg`;
 

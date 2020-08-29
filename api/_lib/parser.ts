@@ -57,8 +57,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 function getDefaultImages(images: string[], theme: Theme): string[] {
   const defaultImage =
     theme === 'dark'
-      ? 'https://website.codersforcauses.org/logo/cfc_logo_white_full.svg'
-      : 'https://website.codersforcauses.org/logo/cfc_logo_black_full.svg';
+      ? 'https://codersforcauses.org/logo/cfc_logo_white_full.svg'
+      : 'https://codersforcauses.org/logo/cfc_logo_black_full.svg';
   if (!images || !images[0]) {
     return [defaultImage];
   }
